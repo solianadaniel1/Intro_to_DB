@@ -11,9 +11,6 @@ DROP TABLE IF EXISTS Books;
 DROP TABLE IF EXISTS Customers;
 DROP TABLE IF EXISTS Authors;
 
-CREATE DATABASE alx_book_store;
---Use current database
-USE alx_book_store;
 
 CREATE TABLE Books(
 book_id INT PRIMARY_KEY,
