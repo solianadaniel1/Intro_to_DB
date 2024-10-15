@@ -1,4 +1,6 @@
 CREATE DATABASE alx_book_store;
+--Use current database
+USE alx_book_store;
 
 CREATE TABLE Books(
 book_id INT PRIMARY_KEY,
