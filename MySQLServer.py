@@ -2,7 +2,7 @@
 
 import mysql.connector
 
-def create_db(db_name):
+def create_db():
     try:
         #Database connection details
         mydb = mysql.connector.connect(
@@ -13,8 +13,8 @@ def create_db(db_name):
         if mydb.is_connected():
             cursor = connection.cursor()
 
-            cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name};")
-            print(f"Database '{db_name}' created successfully!")
+            cursor.execute(f"CREATE DATABASE IF NOT EXISTS alx_book_store;")
+            print(f"Database alx_book_store created successfully!")
     except Error as e:
         print(f"Error: {e}")
 
@@ -25,5 +25,5 @@ def create_db(db_name):
             connection.close()
 
 if __name__ == "__main__":
-    create_db("alx_book_store")
+    create_db()
 
