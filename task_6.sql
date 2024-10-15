@@ -1,6 +1,6 @@
 -- This script inserts multiple rows into the customer table
 
-USE 'alx_book_store';
+USE alx_book_store;
 
 INSERT INTO customer (customer_id, customer_name, email, address)
 VALUES
