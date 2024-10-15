@@ -17,7 +17,7 @@ book_id INT PRIMARY_KEY,
 title VARCHAR(130),
 price DOUBLE,
 publication_date DATE,
-FOREIGN KEY (author_id) REFERENCES Authors(author_id)
+FOREIGN KEY (author_id) REFERENCES Authors(author_id) ON DELETE CASCADE
 );
 CREATE TABLE Authors(
 author_id INT PRIMARY_KEY,
@@ -32,11 +32,11 @@ address TEXT
 CREATE TABLE Orders(
 order_id INT PRIMARY_KEY,
 order_date DATE,
-FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) ON DELETE CASCADE
 );
 CREATE TABLE Order_Details(
 orderdetail_id INT PRIMARY KEY,
-FOREIGN KEY (order_id) REFERENCES Orders(order_id)
-FOREIGN KEY (book_id) REFERENCES Books(book_id)
+FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE CASCADE
+FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE CASCADE
 quantity DOUBLE
 );
