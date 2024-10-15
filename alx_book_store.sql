@@ -1,8 +1,15 @@
--- Create the database
-CREATE DATABASE alx_book_store;
+-- Create the database if it does not exist
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 -- Use the created database
 USE alx_book_store;
+
+-- Drop tables if they exist to avoid errors on re-running the script
+DROP TABLE IF EXISTS Order_Details;
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Books;
+DROP TABLE IF EXISTS Customers;
+DROP TABLE IF EXISTS Authors;
 
 -- Create the Authors table
 CREATE TABLE Authors (
