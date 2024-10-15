@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import mysq.connector
+import mysql.connector
 
 def create_db(db_name):
     try:
