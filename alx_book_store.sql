@@ -26,6 +26,7 @@ author_name VARCHAR(215)
 CREATE TABLE Customers(
 customer_id INT PRIMARY_KEY,
 customer_name VARCHAR(215),
+email VARCHAR(215),
 address TEXT
 );
 CREATE TABLE Orders(
